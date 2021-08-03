@@ -13,15 +13,15 @@ const stateDefault = {
 const BaiTapGameOanTuTiReducer = (state=stateDefault, action)=> {
     switch(action.type){
         case 'CHON_KEO_BUA_BAO': {
-            let mangCuopUpdate =[...state.mangDatCuoc];
-            mangCuopUpdate = mangCuopUpdate.map((item,index)=>{
+            let mangCuocUpdate =[...state.mangDatCuoc];
+            mangCuocUpdate = mangCuocUpdate.map((item,index)=>{
                 if(item.ma === action.maCuoc){
                     return{...item, datCuoc:true}
                 }
                 return {...item, datCuoc:false}
             })
             
-            state.mangCuopUpdate = mangCuopUpdate;
+            state.mangDatCuoc = mangCuocUpdate;
             return {...state}
         }
 

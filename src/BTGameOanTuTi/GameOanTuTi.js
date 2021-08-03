@@ -15,7 +15,9 @@ class GameOanTuTi extends Component {
                     </div>
                     <div className="col-4 mt-5">
                         <KetQuaGame/>
-                        <button className="btn btn-success p-2 display-4 mt-3">Play Game</button>
+                        <button onClick={()=> {
+                            this.props.playGame()
+                        }} className="btn btn-success p-2 display-4 mt-3">Play Game</button>
                     </div>
                     <div className="col-4 mt-5">
                         <Computer/>
